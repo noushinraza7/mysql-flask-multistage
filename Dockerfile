@@ -21,4 +21,4 @@ COPY app.py .
 
 EXPOSE 5000
 
-CMD ["sh","-c", "python -c 'from app import initialize_db; initialize_db()' &&  exec gunicorn --workers 2 --bind 0.0.0.0:5000 app:app"]
+CMD ["sh","-c", "python -c 'from app import initialize_db; initialize_db()' &&  exec gunicorn --workers 2 --bind 0.0.0.0:5006 app:app"]
