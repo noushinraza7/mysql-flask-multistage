@@ -10,7 +10,7 @@ pipeline{
         stage('Build Docker Image') {
             steps {
                 sh '''
-                    docker compose build flask
+                    docker build -t flask-app .
                 '''
             }
         }
